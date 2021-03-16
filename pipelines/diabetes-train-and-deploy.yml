@@ -35,12 +35,12 @@ steps:
 - task: AzureCLI@2
   displayName: 'Create compute for training'
   inputs:
-   azureSubscription: $(ml-ws-connection)
+    azureSubscription: $(ml-ws-connection)
     workingDirectory: $(ml-path)
     scriptLocation: inlineScript
     scriptType: 'bash'
-    inlineScript: 'az ml computetarget create amlcompute -n $(ml-ct) --min-nodes 1 --max-nodes 1 -s STANDARD_D3_V2'
-
+    inlineScript: 'az ml computetarget create amlcompute -n $(ml-ct) --vm-size STANDARD_D2_V2 --max-nodes 1'
+  
 - task: AzureCLI@2
   displayName: 'Train model'
   inputs:
