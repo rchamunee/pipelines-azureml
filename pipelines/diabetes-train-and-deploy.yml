@@ -1,5 +1,5 @@
 variables:
-  ml-ws-connection: 'rchamunee' # Workspace Service Connection name
+  ml-ws-connection: 'azmldemows' # Workspace Service Connection name
   ml-ws: 'scgmlops' # AML Workspace name
   ml-rg: 'scg-mlops-rg' # AML resource Group name
   ml-ct: 'cpu-cluster-1' # AML Compute cluster name
